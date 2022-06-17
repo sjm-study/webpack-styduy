@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkwebpack_study=self.webpackChunkwebpack_study||[]).push([[211],{211:(e,s,t)=>{t.r(s),t.d(s,{default:()=>a});var c=t(294),u=t(181);const a=function(){return c.createElement("h1",{className:u.Z.h1},"List!!!!!")}},181:(e,s,t)=>{t.d(s,{Z:()=>c});const c={h1:"h1__zZul7"}}}]);
+//# sourceMappingURL=211.05855270.js.map
