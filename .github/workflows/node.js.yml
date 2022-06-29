@@ -58,6 +58,5 @@ jobs:
           with:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             FOLDER: ./dist
-            PUBLIC_URL: /webpack-styduy
             BRANCH: gh-pages
       
