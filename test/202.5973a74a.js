@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkwebpack_study=self.webpackChunkwebpack_study||[]).push([[202],{8202:(e,t,a)=>{a.r(t),a.d(t,{default:()=>l});var r=a(7294),c=a(526),n=a(8573);const l=function(){return r.createElement(r.Fragment,null,r.createElement("h1",{className:c.Z.h1},"Home!!!!!"),r.createElement(n.Z,{type:"primary"},"Button"),r.createElement("div",{style:{color:"var(--ant-primary-color)"}},"585555"))}}}]);
-//# sourceMappingURL=202.5973a74a.js.map
