@@ -1,0 +1,1 @@
+{"version":3,"file":"main.499e8aaf.css","mappings":"AAAA;EACE;EACA;AACF;AAEA;EACE;EACA;AAAF","sources":["webpack://webpack-study/./src/styles/index.less"],"sourcesContent":[".wrapper {\n  margin: 0 auto;\n  background-color: chartreuse;\n}\n\n.h1 {\n  text-align: center;\n  color: red;\n}"],"names":[],"sourceRoot":""}
