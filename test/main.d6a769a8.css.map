@@ -1,1 +1,0 @@
-{"version":3,"file":"main.d6a769a8.css","mappings":"AAAA;EACE;EACA;AACF","sources":["webpack://webpack-study/./src/styles/index.less"],"sourcesContent":[".wrapper {\n  margin: 0 auto;\n  background-color: chartreuse;\n}"],"names":[],"sourceRoot":""}
