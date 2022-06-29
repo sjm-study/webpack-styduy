@@ -14,7 +14,6 @@ module.exports = function (env, argv) {
       chunkFilename: '[name].[chunkhash:8].js',
       // publicPath: 'dist/'
     },
-    public_url: '/webpack-styduy',
     module: {
       rules: [
         // {
