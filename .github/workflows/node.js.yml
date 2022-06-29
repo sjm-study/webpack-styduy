@@ -26,8 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
+    - run: npm start
+    - run: npm run build --mode=production --if-present
     
   deploy:
       # if: ${{ always() }}
@@ -52,7 +52,7 @@ jobs:
           if: steps.cache-node-modules.outputs.cache-hit != 'true'
           run: yarn 
 
-        - run: npm run build
+        - run: npm run build --mode=production
         - name: Deploy
           uses: peaceiris/actions-gh-pages@v3
           with:
