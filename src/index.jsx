@@ -32,18 +32,18 @@ const App = () => {
   }, [])
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={'https://sjm-study.github.io/webpack-styduy'}>
       <Suspense fallback={<Spin />}>
         <Routes>
 
           {/* <Route path='/404' element={<NoMatch />} /> */}
-          <Route path="https://sjm-study.github.io/webpack-styduy/" element={<Redirect />} />
-          <Route path="https://sjm-study.github.io/webpack-styduy/home" element={<Home />} />
-          <Route path="https://sjm-study.github.io/webpack-styduy/list" element={<List />} />
+          <Route path="/" element={<Redirect />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/list" element={<List />} />
 
           {/* 404 */}
           {/* <Route path='/*' element={<NoMatch />} /> */}
-          <Route path="https://sjm-study.github.io/webpack-styduy/*" element={<NoMatch />} />
+          <Route path="/*" element={<NoMatch />} />
 
         </Routes>
       </Suspense>
