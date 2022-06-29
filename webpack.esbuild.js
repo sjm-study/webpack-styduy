@@ -121,9 +121,17 @@ module.exports = function (env, argv) {
     },
     devServer: {
       port: 9090,
-      hot: true
+      hot: true,
+      historyApiFallback: true,
+      // liveReload: true,
+      // client: {
+      //   logging: 'info',//错误日志
+      //   progress: true,//在浏览器中以百分比显示编译进度。
+      //   reconnect: true,//告诉 dev-server 它应该尝试重新连接客户端的次数
+      // },
+      // magicHtml: true,
     },
-    devtool: 'source-map',
+    // devtool: 'source-map',
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html'

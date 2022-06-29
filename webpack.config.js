@@ -34,11 +34,11 @@ module.exports = function (env, argv) {
               presets: ['@babel/preset-env', '@babel/preset-react'],
               plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-proposal-class-properties',
                 // antd 按需加载组件和css样式 使用babel-plugin-import 插件
-                ['import', {
-                  libraryName: 'antd',
-                  libraryDirectory: 'es',
-                  style: 'css'
-                }, 'antd']
+                // ['import', {
+                //   libraryName: 'antd',
+                //   libraryDirectory: 'es',
+                //   style: 'css'
+                // }, 'antd']
               ],
             }
           }
@@ -61,6 +61,7 @@ module.exports = function (env, argv) {
         },
         {
           test: /\.less/,
+          include: [path.resolve(__dirname, 'src/styles'), /node_modules/],
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
@@ -76,8 +77,27 @@ module.exports = function (env, argv) {
             {
               loader: 'less-loader'
             }
+          ],
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          use: [
+            {
+              loader: "file-loader"
+            }
           ]
         },
+        {
+          test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.svg$/],
+          use: [
+            {
+              loader: "url-loader",
+              options: {
+                limit: 10000
+              }
+            }
+          ]
+        }
       ]
     },
     optimization: {
@@ -106,9 +126,10 @@ module.exports = function (env, argv) {
     },
     devServer: {
       port: 9090,
-      hot: true
+      hot: true,
+      historyApiFallback: true,
     },
-    devtool: 'source-map',
+    // devtool: 'source-map',
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html'
@@ -118,6 +139,11 @@ module.exports = function (env, argv) {
         filename: '[name].[contenthash:8].css',
         // chunkFilename: '[name].[contenthash:8].css'
       }),
-    ]
+    ],
+    resolve: {
+      alias: {
+        '@': path.resolve('src')
+      }
+    }
   }
 }
