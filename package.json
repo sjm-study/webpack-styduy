@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js --mode=development  --devtool=source-map",
+    "build": "webpack --config webpack.config.js --devtool=source-map",
     "build:esbuild": "webpack --config webpack.esbuild.js --mode=production",
     "start": "webpack-dev-server --mode=development --devtool=eval",
     "start:esbuild": "webpack-dev-server --config webpack.esbuild.js --mode=development --devtool=source-map",
