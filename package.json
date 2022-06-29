@@ -1,7 +1,7 @@
 {
   "name": "webpack-study",
   "version": "1.0.0",
-  "homepage": "https://sjm-study.github.io/webpack-styduy/",
+  "homepage": ".",
   "description": "",
   "main": "index.js",
   "scripts": {
