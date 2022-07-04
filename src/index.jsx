@@ -5,7 +5,7 @@ import { Button, Spin, ConfigProvider,Result } from 'antd'
 import { isBoolean } from 'lodash'
 import { componentDidMound } from './utils/test'
 import minStyles from './styles/index.less'
-import { Route, BrowserRouter, Routes, useNavigate, Navigate } from 'react-router-dom'
+import { Route, BrowserRouter, Routes, useNavigate, Navigate, HashRouter } from 'react-router-dom'
 import TestComponents from './components/test.jsx'
 // import Home from './pages/home.jsx'
 // import List from './pages/list.jsx'
@@ -32,7 +32,7 @@ const App = () => {
   }, [])
 
   return (
-    <BrowserRouter basename={'https://sjm-study.github.io/webpack-styduy'}>
+    <HashRouter >
       <Suspense fallback={<Spin />}>
         <Routes>
 
@@ -47,7 +47,7 @@ const App = () => {
 
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
