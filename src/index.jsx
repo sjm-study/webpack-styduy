@@ -5,7 +5,7 @@ import { Button, Spin, ConfigProvider,Result } from 'antd'
 import { isBoolean } from 'lodash'
 import { componentDidMound } from './utils/test'
 import minStyles from './styles/index.less'
-import { Route, BrowserRouter, Routes, useNavigate, Navigate, HashRouter } from 'react-router-dom'
+import { Route, BrowserRouter, Routes, useNavigate, Navigate, useLocation,HashRouter } from 'react-router-dom'
 import TestComponents from './components/test.jsx'
 // import Home from './pages/home.jsx'
 // import List from './pages/list.jsx'
@@ -29,10 +29,15 @@ const App = () => {
       }
     })
 
+    // window.addEventListener('hashchange', ()=> {
+    //   console.log('hash change!!!')
+    //   console.log(location.hash)
+    // })
+
   }, [])
 
   return (
-    <HashRouter >
+    <BrowserRouter >
       <Suspense fallback={<Spin />}>
         <Routes>
 
@@ -47,7 +52,7 @@ const App = () => {
 
         </Routes>
       </Suspense>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
@@ -65,7 +70,8 @@ const NoMatch = () => {
 
 const Redirect = (props) => {
   const navigate = useNavigate()
-  // console.log(navigate)
+  const locaton = useLocation()
+  console.log(locaton)
 
   return (
     <div className={minStyles.wrapper}>

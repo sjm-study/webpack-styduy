@@ -10,18 +10,24 @@ const Home = () => {
   const renderRef = useRef()
 
   useEffect(() => {
-    setTimeout(() => {
-      const content = <div className='home_insert'>
-        <span>insert</span>
-      </div>
+    // setTimeout(() => {
+    //   const content = <div className='home_insert'>
+    //     <span>insert</span>
+    //   </div>
       
-      //  hydrateRoot(renderRef.current,content)
+    //   //  hydrateRoot(renderRef.current,content)
 
-      const root = createRoot(renderRef.current)
-      root.render(content)
+    //   const root = createRoot(renderRef.current)
+    //   root.render(content)
 
-      setLoading(false)
-    }, 2000);
+    //   setLoading(false)
+    // }, 2000);
+
+    window.addEventListener('hashchange', ()=> {
+      console.log('hash change!!!')
+      console.log(location)
+    })
+
   }, [])
 
   return (
